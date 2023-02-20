@@ -1,0 +1,24 @@
+{
+    "name": "Yet another first extension",
+    "version": "0.1.0",
+    "description": "YouTube links (description)",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.youtube.com/*"],
+
+    "content_scripts": [
+      {
+        "matches": ["https://*.youtube.com/*"],
+        "js": ["popup.js"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "Images/Icon16.png",
+        "24": "Images/Icon48.png",
+        "32": "Images/Icon128.png"
+      },
+      "default_title": "YouTube links (title)",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
